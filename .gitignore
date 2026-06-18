@@ -1,0 +1,63 @@
+# Configuración del Sistema Operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Node.js (dependencias y logs)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.env
+.env.local
+.env.*.local
+
+# PostgreSQL (archivos de base de datos)
+*.sql
+*.sql.gz
+*.dump
+*.backup
+pg_hba.conf
+postgresql.conf
+*.pem
+*.key
+
+# Entornos de Desarrollo y Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.orig
+*.orig
+
+# Archivos de compilación y dependencias del proyecto
+dist/
+build/
+*.log
+*.tmp
+*.temp
+
+# Archivos específicos del proyecto
+config/
+secrets/
+*.pem
+*.key
+*.crt
+*.csr
+.htaccess
+
+# Archivos de sistema y caché
+*.cache
+*.min.js
+*.min.css
+*.map
+.eslintcache
+*.tsbuildinfo
+
+#
+*.pdf
