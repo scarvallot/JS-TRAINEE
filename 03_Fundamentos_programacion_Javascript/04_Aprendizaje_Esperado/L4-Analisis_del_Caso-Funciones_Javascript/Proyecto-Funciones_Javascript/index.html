@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas</title>
+
+    <!-- Bootstrap 4.5.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #f0f2f5;
+      }
+
+      .card {
+        border: none;
+        border-radius: 12px;
+      }
+
+      .card-header {
+        background: linear-gradient(135deg, #6c63ff, #a78bfa);
+        border-radius: 12px 12px 0 0 !important;
+      }
+
+      .tarea-texto {
+        word-break: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <!-- Tarjeta principal -->
+          <div class="card shadow-sm">
+            <!-- Encabezado -->
+            <div class="card-header py-3 text-white">
+              <h5 class="mb-0">📋 Gestor de Tareas</h5>
+              <small class="text-white-50"
+                >JS · jQuery · Bootstrap 4.5.3 · localStorage</small
+              >
+            </div>
+
+            <div class="card-body">
+              <!-- Mensaje de feedback -->
+              <div id="mensaje" class="alert d-none" role="alert"></div>
+
+              <!-- Agregar tarea -->
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  id="input-tarea"
+                  class="form-control"
+                  placeholder="Escribe una nueva tarea..."
+                  maxlength="120"
+                />
+                <div class="input-group-append">
+                  <button id="btn-agregar" class="btn btn-primary">
+                    + Agregar
+                  </button>
+                </div>
+              </div>
+
+              <!-- Búsqueda + limpiar -->
+              <div class="input-group mb-2">
+                <input
+                  type="text"
+                  id="input-buscar"
+                  class="form-control"
+                  placeholder="🔍 Buscar tarea..."
+                />
+                <div class="input-group-append">
+                  <button id="btn-limpiar" class="btn btn-outline-secondary">
+                    Limpiar todo
+                  </button>
+                </div>
+              </div>
+
+              <!-- Contador -->
+              <div class="d-flex justify-content-end mb-3">
+                <span id="contador" class="badge badge-pill badge-secondary">
+                  0 tareas
+                </span>
+              </div>
+
+              <!-- Lista de tareas -->
+              <ul id="lista-tareas" class="list-group list-group-flush"></ul>
+            </div>
+            <!-- /card-body -->
+          </div>
+          <!-- /card -->
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery 3.7.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap 4.5.3 JS (incluye Popper) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Lógica de la aplicación -->
+    <script src="script.js"></script>
+  </body>
+</html>
