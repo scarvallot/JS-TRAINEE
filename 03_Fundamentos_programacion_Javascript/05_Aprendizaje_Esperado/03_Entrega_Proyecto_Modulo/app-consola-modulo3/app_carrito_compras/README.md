@@ -102,9 +102,21 @@ Se construye en tiempo de ejecución a partir de los productos seleccionados:
 ```
 app_carrito_compras/
 ├── carrito_compras.js   # Lógica completa de la aplicación
+├── screenshots/         # Capturas de Pantalla
 └── README.md            # Este documento
 ```
 
+---
+## Capturas de pantalla
+
+### Menú principal
+![Menú principal](screenshots/menu-principal.png)
+
+### Inventario disponible
+![Inventario](screenshots/inventario.png)
+
+### Carrito con productos
+![Carrito](screenshots/carrito.png)
 ---
 
 ## 📦 Inventario Disponible

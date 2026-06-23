@@ -76,7 +76,7 @@ function agregarAlCarrito() {
         alert('Cantidad inválida. Debe ser un número entero positivo.'); 
         return; } 
     const cantidad = Number(cantInput); // Convierte la cantidad a numero
-
+        
     const existente = carrito.find(item => item.id === id); // Busca si el producto ya esta en el carrito
     if (existente) {
         existente.cantidad += cantidad; // Si ya existe, suma la nueva cantidad
@@ -96,6 +96,7 @@ function quitarDelCarrito() {
 
     mostrarCarrito(); // Muestra el carrito con indices numerados
     const indexInput = prompt('Ingresa el número del producto que deseas quitar (según la lista):'); 
+    const index = Number(indexInput);
     // Valida el indice
     if (isNaN(index) || !Number.isInteger(index) || index < 1 || index > carrito.length) { 
         alert('Número inválido.'); 
@@ -142,10 +143,16 @@ function aplicarDescuento() {
 
     const porcentajeInput = prompt('Ingresa el porcentaje de descuento (ej: 10 para 10%):'); // Pide el porcentaje
     const porcentaje = Number(porcentajeInput); // Convierte a numero
-    if (isNaN(porcentaje) || porcentaje < 0 || porcentaje > 100) { alert('Porcentaje inválido. Debe ser un número entre 0 y 100.'); return; } // Valida rango
+    // Valida rango
+    if (isNaN(porcentaje) || porcentaje < 0 || porcentaje > 100) { 
+        alert('Porcentaje inválido. Debe ser un número entre 0 y 100.'); 
+        return; 
+    } 
 
     const resultado = calcularTotalConDescuento(porcentaje); // Calcula los totales con descuento
-    if (!resultado) return; // Sale si no hubo resultado
+    // Sale si no hubo resultado
+    if (!resultado) 
+        return; 
 
     alert(`RESUMEN DE COMPRA\nTotal sin descuento: $${resultado.totalSinDescuento}\nDescuento (${porcentaje}%): -$${resultado.descuento.toFixed(0)}\nTotal a pagar: $${resultado.totalConDescuento.toFixed(0)}`); // Muestra el resumen
 }
