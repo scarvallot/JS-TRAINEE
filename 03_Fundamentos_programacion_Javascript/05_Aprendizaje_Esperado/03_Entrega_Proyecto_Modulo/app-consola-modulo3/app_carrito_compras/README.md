@@ -100,7 +100,7 @@ Se construye en tiempo de ejecución a partir de los productos seleccionados:
 ## 📁 Estructura del Proyecto
 
 ```
-carrito-compras/
+app_carrito_compras/
 ├── carrito_compras.js   # Lógica completa de la aplicación
 └── README.md            # Este documento
 ```
